@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Contracts\Support;
+namespace LaravelCollect\Contracts\Support;
 
 interface Jsonable
 {

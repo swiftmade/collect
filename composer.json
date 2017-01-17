@@ -1,5 +1,5 @@
 {
-    "name": "tightenco/collect",
+    "name": "swiftmade/collect",
     "description": "Collect - Illuminate Collections as a separate package.",
     "keywords": ["laravel", "collection"],
     "license": "MIT",
@@ -18,10 +18,10 @@
     },
     "autoload": {
         "files": [
-            "src/Illuminate/Support/helpers.php"
+            "src/LaravelCollect/Support/helpers.php"
         ],
         "psr-4": {
-            "Illuminate\\": "src/Illuminate"
+            "LaravelCollect\\": "src/LaravelCollect"
         }
     }
 }

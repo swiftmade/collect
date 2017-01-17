@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support;
+namespace LaravelCollect\Support;
 
 use ArrayAccess;
-use Illuminate\Support\Traits\Macroable;
+use LaravelCollect\Support\Traits\Macroable;
 
 class Arr
 {
