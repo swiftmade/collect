@@ -161,7 +161,7 @@ class Collection implements ArrayAccess, Arrayable, Countable, IteratorAggregate
     {
         if (func_num_args() == 2) {
             return $this->contains(function ($item) use ($key, $value) {
-                return data_get($item, $key) == $value;
+                return data_laravelcollect_get($item, $key) == $value;
             });
         }
 
@@ -183,7 +183,7 @@ class Collection implements ArrayAccess, Arrayable, Countable, IteratorAggregate
     {
         if (func_num_args() == 2) {
             return $this->contains(function ($item) use ($key, $value) {
-                return data_get($item, $key) === $value;
+                return data_laravelcollect_get($item, $key) === $value;
             });
         }
 
@@ -315,7 +315,7 @@ class Collection implements ArrayAccess, Arrayable, Countable, IteratorAggregate
     protected function operatorForWhere($key, $operator, $value)
     {
         return function ($item) use ($key, $operator, $value) {
-            $retrieved = data_get($item, $key);
+            $retrieved = data_laravelcollect_get($item, $key);
 
             switch ($operator) {
                 default:
@@ -358,7 +358,7 @@ class Collection implements ArrayAccess, Arrayable, Countable, IteratorAggregate
         $values = $this->getArrayableItems($values);
 
         return $this->filter(function ($item) use ($key, $values, $strict) {
-            return in_array(data_get($item, $key), $values, $strict);
+            return in_array(data_laravelcollect_get($item, $key), $values, $strict);
         });
     }
 
@@ -1188,7 +1188,7 @@ class Collection implements ArrayAccess, Arrayable, Countable, IteratorAggregate
         }
 
         return function ($item) use ($value) {
-            return data_get($item, $value);
+            return data_laravelcollect_get($item, $value);
         };
     }
 
