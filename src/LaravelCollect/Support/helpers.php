@@ -29,7 +29,7 @@ if (! function_exists('value')) {
     }
 }
 
-if (! function_exists('data_get')) {
+if (! function_exists('data_laravelcollect_get')) {
     /**
      * Get an item from an array or object using "dot" notation.
      *
@@ -38,7 +38,7 @@ if (! function_exists('data_get')) {
      * @param  mixed   $default
      * @return mixed
      */
-    function data_get($target, $key, $default = null)
+    function data_laravelcollect_get($target, $key, $default = null)
     {
         if (is_null($key)) {
             return $target;
